@@ -1,0 +1,124 @@
+
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+body {
+  background-color: #1e1e2e;
+  color: #ccd4f4;
+  font-family: 'Fira Code', monospace; 
+
+}
+
+p, li {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.4;
+}
+a {
+  font-style: normal;  
+}
+
+a:link {
+  color: hotpink;
+}
+
+a:visited, a:hover, a:active {
+  color: purple;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.h2 {
+  font-size: 2rem;
+}
+
+.h3 {
+  font-size: 1.3rem;
+  margin: 0 0.25rem;
+  line-height: 1.5;
+}
+
+summary {
+  font-weight: bold;
+  text-align: left;
+}
+
+ul {
+  display: inline-block;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+img {
+  image-rendering: pixelated;
+  display: inline-block;
+  height: 31px;
+  width: auto;
+}
+.nobullets {
+  list-style-type: none;
+  margin: 0;
+}
+.right {
+  float: right;
+}
+.tile {
+  border: 3px solid;
+  border-radius: 8px;
+  padding: 13px;
+  margin: 0;
+  text-align: center;
+  width: 22rem;
+  height: auto;
+}
+.thin {
+  width: 18rem !important;
+}
+
+.wide {
+  width: 21.75rem !important;
+}
+
+.contentcontainer {
+  width: min-content;
+}
+
+.tilebox {
+  flex: 0 0 fit-content;
+}
+  
+.tilecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 80rem;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 52rem) {
+  .wider {
+    width: 47.4rem !important;
+  }
+}
+
+@media only screen and (min-width:53rem) {
+  .contentcontainer{
+    width:fit-content;
+  }  
+}
+hr.solid{
+border: 2px solid #ccd4f4;
+}
+#listening img{
+  float: left;
+  margin-bottom: 5px;
+  height: 70px;
+}
+#listening p, #listening h1{
+  text-align: center;
+}

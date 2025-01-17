@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="perilnet perilnet perilnet"/>
+    <title>perilnet fuck yeah</title>
+    <meta name="keywords"
+      content="peril, perilouh, perilouhh, perill6, perilnet, catfish, webdev, personal"
+    />
+    <link rel="stylesheet" href="\css\main.css">
+</head>
+<body>
+
+    <div style="display:flex; justify-content:center;">
+    <div class="contentcontainer">
+    <h1>hiello</h1>
+    
+    <div class="tilecontainer">
+    
+    <div class="tilebox">
+    <details class="tile" open>
+      <summary class="h2">who</summary>
+      
+      <p>hai, im peril, write websites and break computers. i also dabble with frameworks and robots. hell yea!!!</p>
+      <p>i honestly dont do much outside of writing coding, besides the important human stuff, but i really like oneshot and splatoon(peak autist).</p>
+      <p>i like a lot of things, want to learn a lot of things, and want to do a lot of things. this is to be my repository for all that stuff :D</p>
+      
+      <details closed>
+      <summary class="h3">music</summary>
+        <!--<div id="listening"></div>-->
+        <p>lastfm widget temporary down while i fix css</p>
+      </details>
+      <hr class="solid"/>
+      <p>friends yay</p>
+      <a href="https://jek.wtf/"><img src="https://perill6.nekoweb.org/%2Fimgs%2Fbuttons/jek.webp" title="jek!!!" alt="jek"></a> <a href="https://rentry.co/penisfaangs"><img src="https://perill6.nekoweb.org/%2Fimgs%2Fbuttons/penibutton.gif" title="peni!!" alt="peni"></a>
+    </details>
+    </div>
+    
+    <div class="tilebox">
+    <details class="tile" open>
+      <summary class="h2">where</summary>
+      
+      <details close>
+      <summary class="h3">shit i use</summary>
+      <ul class="nobullets wide">
+        <li>lastfm <span class="right"><a href="https://www.last.fm/user/perilouh">perilouh</a></span></li>
+        <li>github <span class="right"><a href="https://github.com/perilouh">perilouh</a></span></li>
+        <li>steam <span class="right"><a href="https://steamcommunity.com/id/perilouh/">perilouh</a></span></li>
+      </ul>
+      </details>
+      
+      <details open>
+      <summary class="h3">contacts</summary>
+      <ul class="nobullets thin">
+        <li>discord<span class="right"><a href="https://discord.com/users/1211389543505207398"> @perilouhh</a></span></li>
+        <li>matrix <span class="right"> @perilouh:we2.ee</span></li>
+      </ul>
+      <p>you can find me in most places under @perilouh or @perill6 depending on the service ^_^ i dont accept friend requests unless i know you usually or if youve made me aware. i dont check a lot of this stuff minus my discord, thats your best way of contacting me if need be!</p>
+      </details>
+      
+      <details close>
+      <summary class="h3">webrings</summary>
+        <p>nothing yet, check back later!</p> 
+      </details>
+      
+    </details>
+    </div>
+    </div>
+    </div>
+    </div>
+<script>
+// this script is under the MIT license (https://max.nekoweb.org/resources/license.txt)
+
+const USERNAME = "perilouh"; // Put your LastFM username here
+const BASE_URL = `https://lastfm-last-played.biancarosa.com.br/${USERNAME}/latest-song`;
+
+const getTrack = async () => {
+  const request = await fetch(BASE_URL);
+  const json = await request.json();
+  let status;
+
+  let isPlaying = json.track["@attr"]?.nowplaying || false;
+
+  if (!isPlaying) {
+    // Trigger if a song isn't playing
+    return;
+  } else {
+    // Trigger if a song is playing
+  }
+
+  // Values:
+  // COVER IMAGE: json.track.image[1]['#text']
+  // TITLE: json.track.name
+  // ARTIST: json.track.artist['#text']
+
+  document.getElementById("listening").innerHTML = `
+    <img src="${json.track.image[1]["#text"]}">
+    <div id="trackInfo">
+    <h3 id="trackName">${json.track.name}</h3>
+    <p id="artistName">${json.track.artist["#text"]}</p>
+    </div>
+    `;
+};
+
+getTrack();
+setInterval(() => {
+  getTrack();
+}, 10000);
+</script>
+</body>
+</html>
