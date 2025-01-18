@@ -18,11 +18,11 @@ a {
 }
 
 a:link {
-  color: hotpink;
+  color: #f5c2e7;
 }
 
 a:visited, a:hover, a:active {
-  color: purple;
+  color: #cba6f7;
 }
 
 h1 {

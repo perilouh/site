@@ -8,7 +8,7 @@
     <meta name="keywords"
       content="peril, perilouh, perilouhh, perill6, perilnet, catfish, webdev, personal"
     />
-    <link rel="stylesheet" href="\css\main.css">
+<link rel="stylesheet" href="main.css"/>
 </head>
 <body>
 
@@ -17,32 +17,32 @@
     <h1>hiello</h1>
     
     <div class="tilecontainer">
-    
+    <!-- right/top -->
     <div class="tilebox">
     <details class="tile" open>
       <summary class="h2">who</summary>
       
-      <p>hai, im peril, write websites and break computers. i also dabble with frameworks and robots. hell yea!!!</p>
-      <p>i honestly dont do much outside of writing coding, besides the important human stuff, but i really like oneshot and splatoon(peak autist).</p>
-      <p>i like a lot of things, want to learn a lot of things, and want to do a lot of things. this is to be my repository for all that stuff :D</p>
+      <p>hai, im peril, i write websites and break computers. i also dabble with frameworks, ssgs, and robots :3. i dream about making lots of moneys and eventually developing something cool. for now im a stinky student in a stinky country doin stinker stuffs.</p>
+      <p>i honestly dont do much outside of writing code, besides the important human stuff, but i really like oneshot and splatoon(peak autist).</p>
+      <p>i do a lot of shit and mostly wanted this as repository for all of that :D more will be added as i work on things!!</p>
       
-      <details closed>
-      <summary class="h3">music</summary>
+      <!--<details closed>-->
+      <!--<summary class="h3">music</summary>-->
         <!--<div id="listening"></div>-->
-        <p>lastfm widget temporary down while i fix css</p>
-      </details>
+        <!--<p>lastfm widget temporary down while i fix css</p>-->
+      <!--</details>-->
       <hr class="solid"/>
       <p>friends yay</p>
       <a href="https://jek.wtf/"><img src="https://perill6.nekoweb.org/%2Fimgs%2Fbuttons/jek.webp" title="jek!!!" alt="jek"></a> <a href="https://rentry.co/penisfaangs"><img src="https://perill6.nekoweb.org/%2Fimgs%2Fbuttons/penibutton.gif" title="peni!!" alt="peni"></a>
     </details>
     </div>
-    
+    <!-- left/bottom -->
     <div class="tilebox">
     <details class="tile" open>
       <summary class="h2">where</summary>
       
       <details close>
-      <summary class="h3">shit i use</summary>
+      <summary class="h3">stuff im on</summary>
       <ul class="nobullets wide">
         <li>lastfm <span class="right"><a href="https://www.last.fm/user/perilouh">perilouh</a></span></li>
         <li>github <span class="right"><a href="https://github.com/perilouh">perilouh</a></span></li>
@@ -51,7 +51,7 @@
       </details>
       
       <details open>
-      <summary class="h3">contacts</summary>
+      <summary class="h3">contact me</summary>
       <ul class="nobullets thin">
         <li>discord<span class="right"><a href="https://discord.com/users/1211389543505207398"> @perilouhh</a></span></li>
         <li>matrix <span class="right"> @perilouh:we2.ee</span></li>
@@ -61,7 +61,12 @@
       
       <details close>
       <summary class="h3">webrings</summary>
-        <p>nothing yet, check back later!</p> 
+         <div style="text-align:center">
+           <a href="https://baccyflap.com/noai/?prv&s=ouh" target="_top" title="previous">←</a>
+           <a href="https://baccyflap.com/noai" target="_blank">no ai &#x1f6ab;&#129302; webring</a>
+           <a style="font-size:60%" href="https://baccyflap.com/noai/?rnd" target="_top" title="random">(&#x1F3B2;)</a>
+           <a href="https://baccyflap.com/noai/?nxt&s=ouh" target="_top" title="next">→</a>
+         </div>
       </details>
       
     </details>
@@ -70,43 +75,7 @@
     </div>
     </div>
 <script>
-// this script is under the MIT license (https://max.nekoweb.org/resources/license.txt)
-
-const USERNAME = "perilouh"; // Put your LastFM username here
-const BASE_URL = `https://lastfm-last-played.biancarosa.com.br/${USERNAME}/latest-song`;
-
-const getTrack = async () => {
-  const request = await fetch(BASE_URL);
-  const json = await request.json();
-  let status;
-
-  let isPlaying = json.track["@attr"]?.nowplaying || false;
-
-  if (!isPlaying) {
-    // Trigger if a song isn't playing
-    return;
-  } else {
-    // Trigger if a song is playing
-  }
-
-  // Values:
-  // COVER IMAGE: json.track.image[1]['#text']
-  // TITLE: json.track.name
-  // ARTIST: json.track.artist['#text']
-
-  document.getElementById("listening").innerHTML = `
-    <img src="${json.track.image[1]["#text"]}">
-    <div id="trackInfo">
-    <h3 id="trackName">${json.track.name}</h3>
-    <p id="artistName">${json.track.artist["#text"]}</p>
-    </div>
-    `;
-};
-
-getTrack();
-setInterval(() => {
-  getTrack();
-}, 10000);
+//
 </script>
 </body>
 </html>
